@@ -11,7 +11,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    - run: docker build . -t stephansluijs/Node-Demo-App
+    - run: docker build . -t stephansluijs/node-demo-app
     - run: echo "${{secrets.DOCKERHUB_PASSWORD}}" | docker login -u ${{secrets.DOCKERHUB_USERNAME}} --password-stdin
-    - run: docker push stephansluijs/Node-Demo-App
+    - run: docker push stephansluijs/node-demo-app
    
